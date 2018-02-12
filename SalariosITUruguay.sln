@@ -5,6 +5,10 @@ VisualStudioVersion = 15.0.27004.2009
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SalariosITUruguayRestService", "SalariosITUruguayRestService\SalariosITUruguayRestService.csproj", "{F42E27BF-C9A5-43DA-909F-8916D95E40F0}"
 EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "SalariosITUruguayDB", "SalariosITUruguayDB\SalariosITUruguayDB.sqlproj", "{03C35E7E-549D-452D-A446-32EB926F9428}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Repository", "Repository\Repository.csproj", "{812DCA4E-88B8-429B-856D-274A141855B8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,16 @@ Global
 		{F42E27BF-C9A5-43DA-909F-8916D95E40F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F42E27BF-C9A5-43DA-909F-8916D95E40F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F42E27BF-C9A5-43DA-909F-8916D95E40F0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{03C35E7E-549D-452D-A446-32EB926F9428}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{03C35E7E-549D-452D-A446-32EB926F9428}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{03C35E7E-549D-452D-A446-32EB926F9428}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{03C35E7E-549D-452D-A446-32EB926F9428}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{03C35E7E-549D-452D-A446-32EB926F9428}.Release|Any CPU.Build.0 = Release|Any CPU
+		{03C35E7E-549D-452D-A446-32EB926F9428}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{812DCA4E-88B8-429B-856D-274A141855B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{812DCA4E-88B8-429B-856D-274A141855B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{812DCA4E-88B8-429B-856D-274A141855B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{812DCA4E-88B8-429B-856D-274A141855B8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
