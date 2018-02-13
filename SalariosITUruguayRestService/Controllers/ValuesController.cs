@@ -3,16 +3,33 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
+using System.Threading.Tasks;
 using System.Web.Http;
+using Domain;
+using Services;
 
 namespace SalariosITUruguayRestService.Controllers
 {
     public class ValuesController : ApiController
     {
-        // GET api/values
-        public IEnumerable<string> Get()
+        protected readonly ICompanyService companyService;
+        public ValuesController(ICompanyService companyService)
         {
-            return new string[] { "value1", "value2" };
+            this.companyService = companyService;
+        }
+        // GET api/values
+        public async Task<IHttpActionResult> Get()
+        {
+            try
+            {
+                var companies = await companyService.GetAll();
+                return Ok(companies);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                return InternalServerError();
+            }
         }
 
         // GET api/values/5
@@ -22,8 +39,19 @@ namespace SalariosITUruguayRestService.Controllers
         }
 
         // POST api/values
-        public void Post([FromBody]string value)
+        public IHttpActionResult Post(string name)
         {
+            try
+            {
+                var company = new Company {CompanyName = name};
+                companyService.CreateCompany(company);
+                return Ok(company);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                return InternalServerError();
+            }
         }
 
         // PUT api/values/5

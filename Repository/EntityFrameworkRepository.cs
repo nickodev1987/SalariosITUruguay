@@ -14,7 +14,7 @@ namespace Repository
         }
 
         public virtual void Create<TEntity>(TEntity entity, string createdBy = null)
-            where TEntity : class, IEntity
+            where TEntity : class
         {
             //entity.CreatedDate = DateTime.UtcNow;
             //entity.CreatedBy = createdBy;
@@ -22,7 +22,7 @@ namespace Repository
         }
 
         public virtual void Update<TEntity>(TEntity entity, string modifiedBy = null)
-            where TEntity : class, IEntity
+            where TEntity : class
         {
             //entity.ModifiedDate = DateTime.UtcNow;
             //entity.ModifiedBy = modifiedBy;
@@ -31,14 +31,14 @@ namespace Repository
         }
 
         public virtual void Delete<TEntity>(object id)
-            where TEntity : class, IEntity
+            where TEntity : class
         {
             TEntity entity = context.Set<TEntity>().Find(id);
             Delete(entity);
         }
 
         public virtual void Delete<TEntity>(TEntity entity)
-            where TEntity : class, IEntity
+            where TEntity : class
         {
             var dbSet = context.Set<TEntity>();
             if (context.Entry(entity).State == EntityState.Detached)
